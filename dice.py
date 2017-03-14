@@ -26,3 +26,42 @@ def sum_of_pairs(lst):
     return total
 
 print sum_of_pairs([1,2,3,4])
+
+
+def sum_to_ten(lst):
+
+    for i in range(len(lst)-2):
+
+        left = i + 1
+        right = len(lst)-1
+
+        while left < right:
+            if lst[i] + lst[left] + lst[right] == 10:
+                return [lst[i], lst[left], lst[right]]
+
+            elif lst[i] + lst[left] + lst[right] < 10:
+                left += 1
+
+            elif lst[i] + lst[left] + lst[right] > 10:
+                right -= 1
+
+    return "None found"
+
+
+print sum_to_ten([1,2,3,4,5])
+print sum_to_ten([1,2,3,4])
+
+
+# def k_smallest_array(lst, k):
+#         smallest = lst[0]
+#     for num in lst[1:]:
+#         if num < smallest:
+#             smallest = num
+#         else:
+            
+
+
+
+
+
+
