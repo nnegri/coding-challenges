@@ -28,3 +28,5 @@ class HMap(object):
 
     def random_key(self):
         return random.choice(self.keys)
+
+
